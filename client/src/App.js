@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar'
+import Map from './components/Map'
 
 import './App.css';
 
 function App() {
   return (
     <div>
-      <h1>sports app</h1>
+      <Map></Map>
       <Navbar className='navbar' />
     </div>
   );
