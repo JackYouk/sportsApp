@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -22,9 +24,28 @@ export default function FixedBottomNavigation() {
                         setValue(newValue);
                     }}
                     >
-                        <BottomNavigationAction label="Courts" icon={<StadiumIcon />} />
-                        <BottomNavigationAction label="Teams" icon={<GroupsIcon />} />
-                        <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
+                        {/* Courts Button */}
+                        <Link
+                            to='/'
+                        >
+                            <BottomNavigationAction label="Courts" icon={<StadiumIcon />} />
+                        </Link>
+                        
+                        {/* Teams Button */}
+                        <Link
+                            to='/teams'
+                        >
+                            <BottomNavigationAction label="Teams" icon={<GroupsIcon />} />
+                        </Link>
+                        
+
+                        {/* Profile Button */}
+                        <Link
+                            // to={`/profile/${profile._id}`}
+                            to='/profile'
+                        >
+                            <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
+                        </Link>
                 </BottomNavigation>
             </Paper>
         </div>
